@@ -7,9 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        display: ["Instrument Serif", "serif"],
+        body: ["DM Sans", "sans-serif"],
+      },
+      borderRadius: {
+        lg: "0.75rem",
+        md: "0.5rem",
+        sm: "0.25rem",
       },
     },
   },
