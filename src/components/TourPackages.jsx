@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useState, useEffect, useCallback } from "react";
+import {  useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star, ArrowRight, Clock, MapPin } from "lucide-react";
 
 const tours = [
@@ -119,10 +120,11 @@ const TourPackages = () => {
             >
               {/* Image */}
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-black/5">
-                <img
+                <Image
                   src={tour.image}
                   alt={tour.name}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  fill
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
 

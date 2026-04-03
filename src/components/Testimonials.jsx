@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 
 const testimonials = [
@@ -42,7 +43,7 @@ const testimonials = [
     platform: "tripadvisor",
   },
   {
-    text: "Third time booking with Insight India Voyage and they keep getting better. This time we did Nepal — Kathmandu, Pokhara, the works. The mountain flight to see Everest was a highlight. They really listen to what you want and don't push unnecessary add-ons.",
+    text: "Third time booking with Insight India Voyage and they keep getting better. This time we did Nepal — Kathmandu, Pokhara, the works. The flight to see Everest was a highlight. They really listen to what you want and don't push unnecessary add-ons.",
     name: "Amit Verma",
     location: "Delhi, India",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80",
@@ -157,10 +158,12 @@ const Testimonials = () => (
 
             {/* Author */}
             <div className="flex items-center gap-3 mt-6 pt-5 border-t border-black/[0.04]">
-              <img
+              <Image
                 src={t.avatar}
                 alt={t.name}
-                className="w-9 h-9 rounded-full object-cover"
+                width={36}
+                height={36}
+                className="rounded-full object-cover"
               />
               <div>
                 <p className="font-body text-[13px] font-medium text-black/80">
