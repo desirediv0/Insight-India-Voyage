@@ -100,7 +100,7 @@ const FloatingControls = () => {
         hasStarted.current = true;
         fadeIn(audio);
         setIsPlaying(true);
-      } catch {}
+      } catch { }
       return;
     }
 
@@ -112,7 +112,7 @@ const FloatingControls = () => {
       try {
         await audio.play();
         setIsPlaying(true);
-      } catch {}
+      } catch { }
     }
   };
 
@@ -164,7 +164,7 @@ const FloatingControls = () => {
           <div className="relative z-10 flex items-end gap-[3px] h-[14px]">
             {isPlaying ? (
               <>
-                <span className="w-[2.5px] bg-white rounded-full animate-[eq-bar_0.8s_ease-in-out_infinite_alternate]"      style={{ height: "6px" }} />
+                <span className="w-[2.5px] bg-white rounded-full animate-[eq-bar_0.8s_ease-in-out_infinite_alternate]" style={{ height: "6px" }} />
                 <span className="w-[2.5px] bg-white rounded-full animate-[eq-bar_0.8s_ease-in-out_infinite_alternate_0.2s]" style={{ height: "12px" }} />
                 <span className="w-[2.5px] bg-white rounded-full animate-[eq-bar_0.8s_ease-in-out_infinite_alternate_0.4s]" style={{ height: "8px" }} />
                 <span className="w-[2.5px] bg-white rounded-full animate-[eq-bar_0.8s_ease-in-out_infinite_alternate_0.1s]" style={{ height: "14px" }} />

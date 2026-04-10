@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, ChevronDown, Volume2, VolumeX } from "lucide-react";
+import { ArrowRight, Play, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+
 
 const HeroSlider = () => {
   const videoRef = useRef(null);
@@ -38,14 +38,13 @@ const HeroSlider = () => {
           onLoadedData={() => setVideoLoaded(true)}
           onCanPlay={() => setVideoLoaded(true)}
           onLoadedMetadata={() => setVideoLoaded(true)}
-          className={`w-full h-full object-cover transition-opacity duration-[2s] ${
-            videoLoaded ? "opacity-100" : "opacity-0"
-          }`}
+          className={`w-full h-full object-cover transition-opacity duration-[2s] ${videoLoaded ? "opacity-100" : "opacity-0"
+            }`}
           poster="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1920&q=80"
         >
-      
+
           <source
-            src="https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/nik-astro/0_Taj_Mahal_India_1920x1080.mp4"
+            src="https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/nik-astro/download.mp4"
             type="video/mp4"
           />
         </video>
@@ -66,7 +65,7 @@ const HeroSlider = () => {
 
       {/* ── Content ── */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-     
+
 
         {/* Tagline pill */}
         <motion.div
