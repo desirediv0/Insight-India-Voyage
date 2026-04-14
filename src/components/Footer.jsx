@@ -8,14 +8,7 @@ const quickLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-const destinations = [
-  "Rajasthan",
-  "Kerala",
-  "Varanasi",
-  "Ladakh",
-  "Goa",
-  "Nepal",
-];
+import { destinationCategories } from "@/data/destinations";
 
 /* Inline SVGs — no import errors */
 const InstagramIcon = () => (
@@ -102,22 +95,26 @@ const Footer = () => {
             </div>
 
             {/* Destinations */}
-            <div>
-              <h3 className="font-body text-[11px] uppercase tracking-[0.25em] text-white/60 mb-6">
-                Top Destinations
-              </h3>
-              <ul className="space-y-3.5">
-                {destinations.map((d) => (
-                  <li key={d}>
-                    <a
-                      href="#"
-                      className="font-body text-[13px] text-white/40 hover:text-white transition-colors duration-300 font-light"
-                    >
-                      {d}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <div className="lg:col-span-2 flex flex-col md:flex-row gap-12 md:gap-24">
+              {destinationCategories.map((group) => (
+                <div key={group.category} className="flex-1">
+                  <h3 className="font-body text-[11px] uppercase tracking-[0.25em] text-white/60 mb-6">
+                    {group.category}
+                  </h3>
+                  <ul className="space-y-3.5">
+                    {group.items.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.path}
+                          className="font-body text-[13px] text-white/40 hover:text-white transition-colors duration-300 font-light"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
 
             {/* Contact */}
