@@ -4,14 +4,54 @@ import {  useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star, ArrowRight, Clock, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const tours = [
-  { name: "Golden Triangle Tour", route: "Delhi → Agra → Jaipur", days: "5 Days", nights: "4 Nights", rating: 4.9, image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=80" },
-  { name: "Royal Rajasthan", route: "Jaipur → Jodhpur → Udaipur → Jaisalmer", days: "9 Days", nights: "8 Nights", rating: 4.8, image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80" },
-  { name: "Kerala Bliss", route: "Cochin → Munnar → Alleppey", days: "6 Days", nights: "5 Nights", rating: 4.9, image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" },
-  { name: "Spiritual Varanasi", route: "Delhi → Varanasi → Bodhgaya", days: "5 Days", nights: "4 Nights", rating: 4.7, image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600&q=80" },
-  { name: "Himalayan Escape", route: "Delhi → Manali → Shimla", days: "7 Days", nights: "6 Nights", rating: 4.8, image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" },
-  { name: "Nepal Adventure", route: "Kathmandu → Pokhara → Chitwan", days: "8 Days", nights: "7 Nights", rating: 4.9, image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" },
+  { 
+    name: "Classical Nepal", 
+    slug: "classical-nepal",
+    route: "Kathmandu → Chitwan → Pokhara → Kathmandu", 
+    days: "7 Days", 
+    nights: "6 Nights", 
+    rating: 4.9, 
+    image: "/tours/classical-nepal.jpg" 
+  },
+  { 
+    name: "Exotic Kerala", 
+    slug: "exotic-kerala",
+    route: "Cochin → Munnar → Thekkady → Alleppey → Kovalam", 
+    days: "10 Days", 
+    nights: "9 Nights", 
+    rating: 4.9, 
+    image: "/tours/exotic-kerala.jpg" 
+  },
+  { 
+    name: "Golden Triangle", 
+    slug: "golden-triangle",
+    route: "Delhi → Agra → Jaipur → Delhi", 
+    days: "7 Days", 
+    nights: "6 Nights", 
+    rating: 4.8, 
+    image: "/tours/golden-triangle.jpg" 
+  },
+  { 
+    name: "Journey Through Sri Lanka", 
+    slug: "sri-lanka-journey",
+    route: "Colombo → Sigiriya → Kandy → Galle → Colombo", 
+    days: "8 Days", 
+    nights: "7 Nights", 
+    rating: 4.7, 
+    image: "/tours/sri-lanka.jpg" 
+  },
+  { 
+    name: "Royal Rajasthan Tour", 
+    slug: "royal-rajasthan",
+    route: "Udaipur → Jodhpur → Jaipur → Ranthambore → Agra", 
+    days: "12 Days", 
+    nights: "11 Nights", 
+    rating: 4.9, 
+    image: "/tours/royal-rajasthan.jpg" 
+  },
 ];
 
 const TourPackages = () => {
@@ -107,62 +147,63 @@ const TourPackages = () => {
         {/* Cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {visible.map((tour, i) => (
-            <motion.div
-              key={`${tour.idx}-${active}`}
-              initial={{ opacity: 0, x: direction * 60 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.45,
-                delay: i * 0.06,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="group cursor-pointer"
-            >
-              {/* Image */}
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-black/5">
-                <Image
-                  src={tour.image}
-                  alt={tour.name}
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
+            <Link key={`${tour.idx}-${active}`} href={`/tours/${tour.slug}`}>
+              <motion.div
+                initial={{ opacity: 0, x: direction * 60 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.45,
+                  delay: i * 0.06,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="group cursor-pointer"
+              >
+                {/* Image */}
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-black/5">
+                  <Image
+                    src={tour.image}
+                    alt={tour.name}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
 
-                {/* View Tour — center on hover */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <span className="bg-white text-black font-body text-[12px] font-medium rounded-full px-5 py-2.5 flex items-center gap-2 translate-y-3 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
-                    View Tour <ArrowRight size={12} />
+                  {/* View Tour — center on hover */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <span className="bg-white text-black font-body text-[12px] font-medium rounded-full px-5 py-2.5 flex items-center gap-2 translate-y-3 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
+                      View Tour <ArrowRight size={12} />
+                    </span>
+                  </div>
+
+                  {/* Rating */}
+                  <span className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-2.5 py-1 text-[11px] font-medium text-black/60 flex items-center gap-1">
+                    <Star size={10} fill="currentColor" className="text-amber-400" />
+                    {tour.rating}
                   </span>
                 </div>
 
-                {/* Rating */}
-                <span className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-2.5 py-1 text-[11px] font-medium text-black/60 flex items-center gap-1">
-                  <Star size={10} fill="currentColor" className="text-amber-400" />
-                  {tour.rating}
-                </span>
-              </div>
+                {/* Info */}
+                <div className="pt-5 px-0.5">
+                  <h3 className="font-display text-[1.1rem] font-semibold text-black tracking-tight">
+                    {tour.name}
+                  </h3>
 
-              {/* Info */}
-              <div className="pt-5 px-0.5">
-                <h3 className="font-display text-[1.1rem] font-semibold text-black tracking-tight">
-                  {tour.name}
-                </h3>
+                  <div className="flex items-center gap-1.5 mt-3">
+                    <MapPin size={12} strokeWidth={1.5} className="text-black/50 flex-shrink-0" />
+                    <span className="font-body text-[12px] text-black/50 font-light">
+                      {tour.route}
+                    </span>
+                  </div>
 
-                <div className="flex items-center gap-1.5 mt-3">
-                  <MapPin size={12} strokeWidth={1.5} className="text-black/50 flex-shrink-0" />
-                  <span className="font-body text-[12px] text-black/50 font-light">
-                    {tour.route}
-                  </span>
+                  <div className="flex items-center gap-1.5 mt-2">
+                    <Clock size={12} strokeWidth={1.5} className="text-black/50 flex-shrink-0" />
+                    <span className="font-body text-[12px] text-black/50 font-light">
+                      {tour.days} · {tour.nights}
+                    </span>
+                  </div>
                 </div>
-
-                <div className="flex items-center gap-1.5 mt-2">
-                  <Clock size={12} strokeWidth={1.5} className="text-black/50 flex-shrink-0" />
-                  <span className="font-body text-[12px] text-black/50 font-light">
-                    {tour.days} · {tour.nights}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </div>
 

@@ -379,5 +379,95 @@ export const destinationsData = {
         }
       ]
     }
+  },
+  india: {
+    hero: {
+      title: "India",
+      subtitle: "A sub-continent of diversity, heritage, and timeless beauty.",
+      imageSrc: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bbaa?w=800&q=80"
+    ],
+    quickFacts: [
+      { label: "Regions", value: "North, South, East, West, Central" },
+      { label: "Culture", value: "Vibrant & Diverse" },
+      { label: "Experience", value: "Luxury & Heritage" }
+    ],
+    highlights: [
+      { icon: "Map", title: "Cultural Depth", text: "From Himalayan foothills to tropical shores." },
+      { icon: "Utensils", title: "Cuisine", text: "A world of flavors and regional specialties." },
+      { icon: "Camera", title: "Architecture", text: "Forts, palaces, and temples beyond imagination." },
+      { icon: "Heart", title: "Spirituality", text: "Ancient traditions and soul-stirring rituals." }
+    ],
+    description: [
+      "India is not just a destination; it is an experience that transforms you. From the snow-capped peaks of the Himalayas to the sun-drenched beaches of the South, every corner of this vast land tells a unique story.",
+      "Explore the royal grandeur of Rajasthan, the spiritual serenity of the Ganges, the lush backwaters of Kerala, and the untamed wilderness of central India's tiger reserves.",
+      "Our curated journeys invite you to discover India's profound history, vibrant festivals, and unparalleled hospitality in absolute luxury."
+    ],
+    videoData: {
+      title: "The Spirit of India",
+      videoId: "G3-v4f_Wpbc",
+      features: [
+        {
+          heading: "Timeless Heritage",
+          description: "Witness the architectural marvels that have stood for centuries, each a testament to India's glorious past."
+        },
+        {
+          heading: "Natural Wonders",
+          description: "From desert sands to emerald tea gardens, experience a landscape as diverse as its people."
+        },
+        {
+          heading: "Modern Luxury",
+          description: "Stay in former palaces and world-class retreats that offer the pinnacle of contemporary comfort."
+        }
+      ]
+    }
+  },
+  subcontinent: {
+    hero: {
+      title: "Nepal, Bhutan & Sri Lanka",
+      subtitle: "Himalayan peaks, serene monasteries, and tropical island bliss.",
+      imageSrc: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&q=80"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+      "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80"
+    ],
+    quickFacts: [
+      { label: "Destinations", value: "Nepal, Bhutan, Sri Lanka" },
+      { label: "Vibe", value: "Pristine & Spiritual" },
+      { label: "Landscape", value: "Mountains to Oceans" }
+    ],
+    highlights: [
+      { icon: "Mountain", title: "Himalayan Heights", text: "The majestic peaks of Nepal and Bhutan." },
+      { icon: "Sun", title: "Island Paradise", text: "The pristine beaches and tea hills of Sri Lanka." },
+      { icon: "Shield", title: "Hidden Kingdoms", text: "Undisturbed traditions and exclusive cultures." },
+      { icon: "Leaf", title: "Natural Serenity", text: "Breathtaking landscapes and spiritual sanctuaries." }
+    ],
+    description: [
+      "Beyond India's borders lie some of the world's most enchanting destinations. Nepal, Bhutan, and Sri Lanka offer distinct experiences bound by a shared sense of spirituality and natural beauty.",
+      "In Nepal, witness the scale of the world's highest mountains. In Bhutan, the last great Himalayan kingdom, discover a culture where happiness is the ultimate measure of success. In Sri Lanka, explore ancient ruins and lush tea estates fringed by golden sands.",
+      "Whether you seek adventure, peace, or a deep connection with nature, these neighboring gems provide a perfect extension or a standalone journey of discovery."
+    ],
+    videoData: {
+      title: "Gems of the Subcontinent",
+      videoId: "m-6pS6M-r0w",
+      features: [
+        {
+          heading: "Spiritual Sanctuaries",
+          description: "Visit ancient monasteries and sacred sites where time seems to stand still."
+        },
+        {
+          heading: "Untouched Nature",
+          description: "Explore pristine valleys and emerald hills far removed from the modern world."
+        },
+        {
+          heading: "Island Treasures",
+          description: "Unwind on the tropical shores of Sri Lanka, a condensed paradise of ruins and wildlife."
+        }
+      ]
+    }
   }
 };

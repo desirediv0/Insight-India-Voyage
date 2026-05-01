@@ -72,7 +72,7 @@ const HeroSlider = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8"
+          className="mb-6"
         >
           <span className="inline-flex items-center gap-2 text-[11px] md:text-xs tracking-[0.3em] uppercase text-white/60 font-light">
             <span className="w-8 h-[1px] bg-white/30" />
@@ -82,23 +82,23 @@ const HeroSlider = () => {
         </motion.div>
 
         {/* Main Heading */}
-        <div className="overflow-hidden mb-6">
+        <div className="overflow-hidden mb-4">
           <motion.h1
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[clamp(2.5rem,8vw,6.5rem)] font-semibold text-white leading-[0.95] tracking-tight"
+            className="font-display text-[clamp(2rem,6vw,4.5rem)] font-semibold text-white leading-[0.95] tracking-tight"
           >
             Discover India
           </motion.h1>
         </div>
 
-        <div className="overflow-hidden mb-10">
+        <div className="overflow-hidden mb-8">
           <motion.h1
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ delay: 0.65, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[clamp(2.5rem,8vw,6.5rem)] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-white/60 to-white/40 leading-[0.95] tracking-tight"
+            className="font-display text-[clamp(2rem,6vw,4.5rem)] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-white/60 to-white/40 leading-[0.95] tracking-tight"
           >
             Like Never Before
           </motion.h1>
@@ -109,7 +109,7 @@ const HeroSlider = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-body text-sm md:text-base text-white/50 font-light max-w-md mb-12 leading-relaxed tracking-wide"
+          className="font-body text-sm md:text-base text-white/50 font-light max-w-md mb-10 leading-relaxed tracking-wide"
         >
           Luxury journeys crafted with passion, curated for the extraordinary traveler since 2007.
         </motion.p>

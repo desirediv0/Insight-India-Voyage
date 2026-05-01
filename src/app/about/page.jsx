@@ -22,6 +22,19 @@ const milestones = [
   { year: "2024", text: "Serving travelers from 40+ countries with 10,000+ happy journeys" },
 ];
 
+const team = [
+  {
+    name: "Rahul Baloni",
+    role: "Partner",
+    bio: "Rahul Baloni brings a strong understanding of destination operations, itinerary planning, and travel logistics, with a focus on creating seamless and memorable journeys across India. With a passion for showcasing India’s diverse landscapes, heritage, and cultural richness, Rahul works closely on developing personalized travel experiences that reflect both quality and authenticity. His hands-on approach and commitment to service make him a trusted partner for travel professionals seeking reliable ground support in India.",
+  },
+  {
+    name: "Anshul Baloni",
+    role: "Partner",
+    bio: "Anshul Baloni focuses on travel partnerships, client relationships, and curated itinerary development for international travel advisors and agencies. With a strong interest in luxury and tailor-made travel, Anshul is dedicated to building long-term collaborations and creating journeys that are thoughtful, well-paced, and aligned with each client’s expectations. His approach combines responsiveness, creativity, and a deep appreciation for meaningful travel experiences across India and the Indian Subcontinent.",
+  }
+];
+
 const easeOut = [0.16, 1, 0.3, 1];
 
 const About = () => (
@@ -119,23 +132,13 @@ const About = () => (
               <p>
                 Founded in 2007 by{" "}
                 <span className="text-black font-medium">Mr. Dinesh Baloni</span>,
-                Insight India Voyage was born from a singular vision — to showcase
-                the incredible diversity and beauty of India to the world, wrapped
-                in the comfort of true luxury.
+                Insight India Voyage was born from a vision to showcase the beauty 
+                of India through the lens of true luxury.
               </p>
               <p>
-                What started as a small team of passionate travel enthusiasts in
-                New Delhi has grown into a{" "}
-                <span className="text-black font-medium">
-                  Government of India recognized
-                </span>{" "}
-                tour operator with an international presence spanning across
-                continents.
-              </p>
-              <p>
-                Today, we are proud to be one of India&apos;s most trusted luxury
-                travel companies, serving discerning travelers from over 40
-                countries.
+                What began as a passionate team in New Delhi is now a{" "}
+                <span className="text-black font-medium">Government of India recognized</span>{" "}
+                operator serving discerning travelers from over 40 countries.
               </p>
             </div>
 
@@ -175,6 +178,49 @@ const About = () => (
               />
             </div>
           </motion.div>
+        </div>
+      </div>
+    </section>
+
+    {/* ── Leadership ── */}
+    <section className="bg-white py-12 md:py-16 border-t border-black/[0.04]">
+      <div className="max-w-6xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: easeOut }}
+          className="mb-16"
+        >
+          <span className="inline-block uppercase tracking-[0.3em] text-[11px] font-medium text-black/30 mb-5">
+            Our Leadership
+          </span>
+          <h2 className="font-display text-3xl md:text-[2.75rem] font-semibold text-black tracking-tight leading-[1.1]">
+            The Minds Behind the Magic
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+          {team.map((member, i) => (
+            <motion.div
+              key={member.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15, duration: 0.7, ease: easeOut }}
+              className="flex flex-col"
+            >
+              <h3 className="font-display text-2xl font-semibold text-black mb-1">
+                {member.name}
+              </h3>
+              <p className="font-body text-[13px] uppercase tracking-widest text-black/40 font-medium mb-6">
+                {member.role}
+              </p>
+              <p className="font-body text-[15px] text-black/60 font-light leading-[1.8]">
+                {member.bio}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
