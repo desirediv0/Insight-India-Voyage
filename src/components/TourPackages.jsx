@@ -8,13 +8,22 @@ import Link from "next/link";
 
 const tours = [
   { 
-    name: "Classical Nepal", 
-    slug: "classical-nepal",
-    route: "Kathmandu → Chitwan → Pokhara → Kathmandu", 
+    name: "Golden Triangle", 
+    slug: "golden-triangle",
+    route: "Delhi → Agra → Jaipur → Delhi", 
     days: "7 Days", 
     nights: "6 Nights", 
+    rating: 4.8, 
+    image: "/tours/golden-triangle.jpg" 
+  },
+  { 
+    name: "Royal Rajasthan Tour", 
+    slug: "royal-rajasthan",
+    route: "Udaipur → Jodhpur → Jaipur → Ranthambore → Agra", 
+    days: "12 Days", 
+    nights: "11 Nights", 
     rating: 4.9, 
-    image: "/tours/classical-nepal.jpg" 
+    image: "/tours/royal-rajasthan.jpg" 
   },
   { 
     name: "Exotic Kerala", 
@@ -26,13 +35,13 @@ const tours = [
     image: "/tours/exotic-kerala.jpg" 
   },
   { 
-    name: "Golden Triangle", 
-    slug: "golden-triangle",
-    route: "Delhi → Agra → Jaipur → Delhi", 
+    name: "Classical Nepal", 
+    slug: "classical-nepal",
+    route: "Kathmandu → Chitwan → Pokhara → Kathmandu", 
     days: "7 Days", 
     nights: "6 Nights", 
-    rating: 4.8, 
-    image: "/tours/golden-triangle.jpg" 
+    rating: 4.9, 
+    image: "/tours/classical-nepal.jpg" 
   },
   { 
     name: "Journey Through Sri Lanka", 
@@ -42,15 +51,6 @@ const tours = [
     nights: "7 Nights", 
     rating: 4.7, 
     image: "/tours/sri-lanka.jpg" 
-  },
-  { 
-    name: "Royal Rajasthan Tour", 
-    slug: "royal-rajasthan",
-    route: "Udaipur → Jodhpur → Jaipur → Ranthambore → Agra", 
-    days: "12 Days", 
-    nights: "11 Nights", 
-    rating: 4.9, 
-    image: "/tours/royal-rajasthan.jpg" 
   },
 ];
 

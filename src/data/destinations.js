@@ -384,11 +384,11 @@ export const destinationsData = {
     hero: {
       title: "India",
       subtitle: "A sub-continent of diversity, heritage, and timeless beauty.",
-      imageSrc: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80"
+      imageSrc: "/north-india.jpg"
     },
     images: [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
-      "https://images.unsplash.com/photo-1548013146-72479768bbaa?w=800&q=80"
+      "/tours/golden-triangle.jpg",
+      "/tours/royal-rajasthan.jpg"
     ],
     quickFacts: [
       { label: "Regions", value: "North, South, East, West, Central" },
@@ -429,11 +429,11 @@ export const destinationsData = {
     hero: {
       title: "Nepal, Bhutan & Sri Lanka",
       subtitle: "Himalayan peaks, serene monasteries, and tropical island bliss.",
-      imageSrc: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&q=80"
+      imageSrc: "/nepal.jpg"
     },
     images: [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
-      "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80"
+      "/tours/classical-nepal.jpg",
+      "/tours/sri-lanka.jpg"
     ],
     quickFacts: [
       { label: "Destinations", value: "Nepal, Bhutan, Sri Lanka" },

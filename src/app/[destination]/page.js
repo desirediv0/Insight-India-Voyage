@@ -4,8 +4,9 @@ import HeroSection from "@/components/destination/HeroSection";
 import ImageCarousel from "@/components/destination/ImageCarousel";
 import DescriptionSection from "@/components/destination/DescriptionSection";
 import Highlights from "@/components/destination/Highlights";
-import VideoTextSection from "@/components/destination/VideoTextSection";
 import Testimonials from "@/components/Testimonials";
+import TourPackages from "@/components/TourPackages";
+import Link from "next/link";
 
 export function generateMetadata({ params }) {
   const { destination } = params;
@@ -44,11 +45,21 @@ const DestinationPage = ({ params }) => {
 
       <Highlights highlights={data.highlights} />
 
-      <VideoTextSection 
-        title={data.videoData.title}
-        videoId={data.videoData.videoId} 
-        features={data.videoData.features}
-      />
+      <TourPackages />
+
+      <section className="bg-white py-12 md:py-16 border-t border-black/[0.06]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="font-body text-lg md:text-xl text-black/70 font-light mb-6">
+            Looking for something else? Contact us to help you create your journey.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center bg-black text-white font-body text-sm font-medium rounded-full px-8 py-3.5 hover:bg-black/85 transition-colors"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </section>
 
       <Testimonials />
     </main>

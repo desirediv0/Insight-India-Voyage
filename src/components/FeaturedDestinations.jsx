@@ -12,16 +12,14 @@ const destinations = [
     path: "/india",
     tours: "12 Curated Journeys",
     desc: "From royal palaces to sacred rivers, experience the timeless magic of incredible India",
-    image:
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
+    image: "/north-india.jpg",
   },
   {
     title: "Nepal, Bhutan & Sri Lanka",
     path: "/subcontinent",
     tours: "8 Exclusive Routes",
     desc: "Explore the spiritual heights of the Himalayas and the serene beauty of tropical island shores",
-    image:
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+    image: "/nepal.jpg",
   },
 ];
 

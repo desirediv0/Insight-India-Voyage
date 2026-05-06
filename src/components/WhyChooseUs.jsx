@@ -1,27 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Compass, Heart, Shield } from "lucide-react";
+import { Compass, Map, MessageCircle, MapPin, CheckCircle, Star } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 
 const features = [
   {
     icon: Compass,
-    title: "Travel Experts",
-    desc: "With 18+ years of experience, our seasoned travel experts craft journeys that go beyond the ordinary. Every detail is meticulously planned.",
+    title: "Experienced Travel experts",
+    desc: "With years of experience, our seasoned travel experts craft journeys that go beyond the ordinary.",
     num: "01",
   },
   {
-    icon: Heart,
-    title: "Warm & Friendly Service",
-    desc: "From your first inquiry to your return home, experience genuine warmth and personalized attention at every touchpoint.",
+    icon: Map,
+    title: "Tailor made itineraries",
+    desc: "Thoughtfully designed itineraries tailored specifically to your unique preferences and style.",
     num: "02",
   },
   {
-    icon: Shield,
-    title: "Exceptional Value",
-    desc: "Luxury doesn't mean overpriced. We deliver five-star experiences with transparent pricing and unmatched value for your investment.",
+    icon: MessageCircle,
+    title: "Fast, clear & reliable",
+    desc: "Seamless communication at every step, providing you with clarity and peace of mind.",
     num: "03",
+  },
+  {
+    icon: MapPin,
+    title: "Strong local expertise",
+    desc: "Unmatched knowledge across India and the subcontinent to offer authentic experiences.",
+    num: "04",
+  },
+  {
+    icon: CheckCircle,
+    title: "Seamless on ground execution",
+    desc: "Flawless logistics and execution, allowing you to simply enjoy your journey without worry.",
+    num: "05",
+  },
+  {
+    icon: Star,
+    title: "Curated stays & experiences",
+    desc: "Handpicked accommodations and exclusive activities that redefine exceptional travel.",
+    num: "06",
   },
 ];
 
@@ -46,9 +64,11 @@ const WhyChooseUs = () => (
               duration: 0.7,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className={`group relative py-12 md:py-14 md:px-10 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 border-black/[0.06] ${
-              i < features.length - 1 ? "md:border-r md:border-black/[0.06]" : ""
-            }`}
+            className={`group relative py-12 md:py-14 md:px-10 border-b border-black/[0.06] ${
+              i % 3 !== 2 ? "md:border-r md:border-black/[0.06]" : ""
+            } ${i % 3 === 0 ? "md:pl-0" : ""} ${
+              i % 3 === 2 ? "md:pr-0" : ""
+            } ${i >= 3 ? "md:border-b-0" : ""}`}
           >
             {/* Number + Icon row */}
             <div className="flex items-center gap-4 mb-8">
