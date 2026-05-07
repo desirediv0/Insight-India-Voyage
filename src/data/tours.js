@@ -308,5 +308,80 @@ export const toursData = {
         stay: "Departure"
       }
     ]
+  },
+  "spiritual-journey": {
+    name: "Spiritual Journey",
+    duration: "10 Days / 9 Nights",
+    route: "Delhi → Rishikesh → Varanasi → Delhi",
+    highlights: [
+      "Ganges Aarti at Parmarth Niketan",
+      "Sunrise Boat Ride in Varanasi",
+      "Sarnath Excursion",
+      "Yoga Sessions in Rishikesh",
+      "Ancient Temples of Varanasi"
+    ],
+    image: "/tours/spiritual-journey.jpg",
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "ARRIVE DELHI",
+        description: "Arrive Delhi by International flight. Meeting on arrival at Delhi International airport by our representative & transfer to hotel. Delhi, the capital of India, is fascinating city with complexities, beauty and dynamism, where the past co-exists with the present. Located on the banks of the river Yamuna, Delhi has witnessed the rise and fall of many cities over the last five millenniums.",
+        stay: "Delhi"
+      },
+      {
+        day: "Day 02",
+        title: "IN DELHI",
+        description: "Explore New Delhi by visiting Gandhi Smriti Museum, dedicated to Mahatma Gandhi. Later proceed to visit Tomb of Humayun, a magnificent 16th-century garden tomb. Post Lunch: Visit Lotus Temple, a Baháʼí House of Worship known for its lotus shape. Drive to Qutab Minar and the famous Iron Pillar. Finish with a drive along Rajpath towards Rashtrapati Bhawan and India Gate.",
+        stay: "Delhi"
+      },
+      {
+        day: "Day 03",
+        title: "DELHI / RISHIKESH",
+        description: "Transfer to Rishikesh by AC bus (242 kms / 4-5 hours). Rishikesh, the gateway to the upper Garhwal region and starting point for Char Dham pilgrimage, is a spiritual town at the confluence of the Chandrabhaga and Ganga. Surrounded by scenic hills, it is considered sacred for meditation and attaining salvation.",
+        stay: "Rishikesh"
+      },
+      {
+        day: "Day 04",
+        title: "IN RISHIKESH",
+        description: "Early morning Yoga session followed by breakfast. Evening: Attend the sunset Aarti ceremony at Parmarth Niketan on the banks of the Ganges, featuring Vedic chants, bhajans, and fire rituals (yagna) conducted by ashram students.",
+        stay: "Rishikesh"
+      },
+      {
+        day: "Day 05",
+        title: "IN RISHIKESH",
+        description: "Early morning Yoga session. Rest of the day free at leisure to explore the 'Place of Sagas' and its many temples and ashrams.",
+        stay: "Rishikesh"
+      },
+      {
+        day: "Day 06",
+        title: "RISHIKESH / VARANASI",
+        description: "Transfer to Dehradun airport to board flight for Varanasi, the Hindus' holiest pilgrimage city, also known as the 'City of Light.' Varanasi is the oldest continuously inhabited city in the world. Evening: Attend the Aarti ceremony at the Ghat, a symbolic waving of oil lamps in devotion to the river Ganges.",
+        stay: "Varanasi"
+      },
+      {
+        day: "Day 07",
+        title: "IN VARANASI",
+        description: "Enjoy a dawn boat ride on the sacred Ganges, witnessing pilgrims praying to the rising sun. Return to hotel for breakfast. Later, visit Benaras Hindu University, Bharat Mata Temple, and the gold-spired Vishwanath Temple (from outside). Also visit Annapurna Temple and Monkey Temple.",
+        stay: "Varanasi"
+      },
+      {
+        day: "Day 08",
+        title: "IN VARANASI",
+        description: "Excursion to Sarnath (13kms), where Buddha delivered His first sermon. See the Chowkandi and Dhamek Stupas, ruins of ancient monasteries, and the temple built by the Mahabodhi Society.",
+        stay: "Varanasi"
+      },
+      {
+        day: "Day 09",
+        title: "VARANASI / DELHI",
+        description: "Transfer to Varanasi airport to board flight for Delhi. Upon arrival, transfer to the hotel. Rest of the day free at leisure.",
+        stay: "Delhi"
+      },
+      {
+        day: "Day 10",
+        title: "DEPARTURE",
+        description: "After breakfast, transfer to the airport to board flight for home.",
+        stay: "Departure"
+      }
+    ]
   }
 };

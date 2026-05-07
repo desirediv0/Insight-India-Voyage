@@ -17,6 +17,15 @@ const tours = [
     image: "/tours/golden-triangle.jpg" 
   },
   { 
+    name: "Spiritual Journey", 
+    slug: "spiritual-journey",
+    route: "Delhi → Rishikesh → Varanasi → Delhi", 
+    days: "10 Days", 
+    nights: "9 Nights", 
+    rating: 4.9, 
+    image: "/tours/spiritual-journey.jpg" 
+  },
+  { 
     name: "Royal Rajasthan Tour", 
     slug: "royal-rajasthan",
     route: "Udaipur → Jodhpur → Jaipur → Ranthambore → Agra", 

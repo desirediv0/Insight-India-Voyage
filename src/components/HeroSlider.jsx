@@ -82,27 +82,17 @@ const HeroSlider = () => {
         </motion.div>
 
         {/* Main Heading */}
-        <div className="overflow-hidden mb-4">
+        <div className="overflow-hidden mb-10">
           <motion.h1
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[clamp(2rem,6vw,4.5rem)] font-semibold text-white leading-[0.95] tracking-tight"
+            className="font-display text-[clamp(1.2rem,3.5vw,2.8rem)] font-medium text-white leading-tight tracking-wide max-w-3xl"
           >
-            Discover India
+            Your Trusted DMC for India & the Subcontinent
           </motion.h1>
         </div>
 
-        <div className="overflow-hidden mb-8">
-          <motion.h1
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.65, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[clamp(2rem,6vw,4.5rem)] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-white/60 to-white/40 leading-[0.95] tracking-tight"
-          >
-            Like Never Before
-          </motion.h1>
-        </div>
 
         {/* Subtext */}
         <motion.p

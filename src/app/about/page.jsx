@@ -136,9 +136,9 @@ const About = () => (
                 of India through the lens of true luxury.
               </p>
               <p>
-                What began as a passionate team in New Delhi is now a{" "}
-                <span className="text-black font-medium">Government of India recognized</span>{" "}
-                operator serving discerning travelers from over 40 countries.
+                From tailor-made cultural journeys to ultra-luxury escapes, we are a{" "}
+                <span className="text-black font-medium">Government of India recognized DMC</span>{" "}
+                trusted by travelers and travel advisors across more than 40 countries.
               </p>
             </div>
 
