@@ -343,7 +343,8 @@ export const destinationsData = {
     },
     images: [
       "/sri-lanka-1.jpg",
-      "/sri-lanka-2.jpg",
+      "/sri-lanka-3.jpg",
+      "/sri-lanka-2.jpg"
     ],
     quickFacts: [
       { label: "Best Time To Visit", value: "Dec-Mar (West), May-Sep (East)" },
