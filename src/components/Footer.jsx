@@ -57,7 +57,7 @@ const Footer = () => {
                   className="object-contain"
                 />
               </Link>
-              <p className="font-body text-[13px] text-white/30 font-light leading-relaxed mb-8 max-w-[240px]">
+              <p className="font-body text-[14px] text-white/30 font-light leading-relaxed mb-8 max-w-[240px]">
                 Crafting luxury travel experiences across India since 2007.
               </p>
 
@@ -77,7 +77,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-body text-[11px] uppercase tracking-[0.25em] text-white/60 mb-6">
+              <h3 className="font-body text-[14px] uppercase tracking-[0.25em] text-white/90 mb-6">
                 Quick Links
               </h3>
               <ul className="space-y-3.5">
@@ -85,7 +85,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-body text-[13px] text-white/60 hover:text-white transition-colors duration-300 font-light"
+                      className="font-body text-[14px] text-white/90 hover:text-white transition-colors duration-300 font-light"
                     >
                       {link.name}
                     </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
             <div className="lg:col-span-2 flex flex-col md:flex-row gap-12 md:gap-24">
               {destinationCategories.map((group) => (
                 <div key={group.category} className="flex-1">
-                  <h3 className="font-body text-[11px] uppercase tracking-[0.25em] text-white/60 mb-6">
+                  <h3 className="font-body text-[14px] uppercase tracking-[0.25em] text-white/90 mb-6">
                     {group.category}
                   </h3>
                   <ul className="space-y-3.5">
@@ -106,7 +106,7 @@ const Footer = () => {
                       <li key={item.name}>
                         <Link
                           href={item.path}
-                          className="font-body text-[13px] text-white/40 hover:text-white transition-colors duration-300 font-light"
+                          className="font-body text-[14px] text-white/40 hover:text-white transition-colors duration-300 font-light"
                         >
                           {item.name}
                         </Link>
@@ -119,7 +119,7 @@ const Footer = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="font-body text-[11px] uppercase tracking-[0.25em] text-white/60 mb-6">
+              <h3 className="font-body text-[14px] uppercase tracking-[0.25em] text-white/90 mb-6">
                 Get In Touch
               </h3>
               <div className="space-y-4">
@@ -130,7 +130,7 @@ const Footer = () => {
                   <div className="w-8 h-8 rounded-full bg-white/[0.04] flex items-center justify-center flex-shrink-0">
                     <Phone size={13} strokeWidth={1.5} className="text-white/30" />
                   </div>
-                  <span className="font-body text-[13px] text-white/40 group-hover:text-white transition-colors duration-300 font-light">
+                  <span className="font-body text-[14px] text-white/40 group-hover:text-white transition-colors duration-300 font-light">
                     +91 11 4709 2122
                   </span>
                 </a>
@@ -142,7 +142,7 @@ const Footer = () => {
                   <div className="w-8 h-8 rounded-full bg-white/[0.04] flex items-center justify-center flex-shrink-0">
                     <Mail size={13} strokeWidth={1.5} className="text-white/30" />
                   </div>
-                  <span className="font-body text-[13px] text-white/40 group-hover:text-white transition-colors duration-300 font-light">
+                  <span className="font-body text-[14px] text-white/40 group-hover:text-white transition-colors duration-300 font-light">
                     info@insightindiavoyage.com
                   </span>
                 </a>
@@ -151,7 +151,7 @@ const Footer = () => {
                   <div className="w-8 h-8 rounded-full bg-white/[0.04] flex items-center justify-center flex-shrink-0">
                     <MapPin size={13} strokeWidth={1.5} className="text-white/30" />
                   </div>
-                  <span className="font-body text-[13px] text-white/40 font-light">
+                  <span className="font-body text-[14px] text-white/40 font-light">
                     Dwarka, New Delhi, India
                   </span>
                 </div>
@@ -161,7 +161,7 @@ const Footer = () => {
 
           {/* Bottom bar */}
           <div className="mt-16 pt-6 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="font-body text-[11px] text-white/20 font-light">
+            <p className="font-body text-[14px] text-white/20 font-light">
               © {new Date().getFullYear()} Insight India Voyage. All rights reserved.
             </p>
             

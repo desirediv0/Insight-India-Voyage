@@ -121,13 +121,6 @@ const HeroSlider = () => {
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
           </Link>
-
-          <button className="group font-body text-sm font-light text-white/70 rounded-full px-10 py-4 flex items-center gap-3 border border-white/[0.12] transition-all duration-500 hover:border-white/30 hover:text-white backdrop-blur-sm">
-            <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/40 transition-all duration-300">
-              <Play size={10} fill="white" className="ml-0.5" />
-            </span>
-            Watch Our Story
-          </button>
         </motion.div>
       </div>
 

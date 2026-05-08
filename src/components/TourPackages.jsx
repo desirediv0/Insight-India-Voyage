@@ -76,6 +76,7 @@ const TourPackages = () => {
   };
 
   const [visibleCount, setVisibleCount] = useState(3);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const update = () => setVisibleCount(getVisibleCount());
@@ -109,10 +110,22 @@ const TourPackages = () => {
     return items;
   };
 
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      next();
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [next, isPaused]);
+
   const visible = getVisibleTours();
 
   return (
-    <section className="bg-[#f8f8f8] py-12 md:py-16 overflow-hidden">
+    <section 
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      className="bg-[#f8f8f8] py-12 md:py-16 overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-end justify-between mb-14 md:mb-16">

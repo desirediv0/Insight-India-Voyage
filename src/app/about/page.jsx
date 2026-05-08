@@ -111,7 +111,7 @@ const About = () => (
     {/* ── Who We Are ── */}
     <section className="bg-white py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1  gap-16 lg:gap-24 items-center">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -158,24 +158,6 @@ const About = () => (
                   </p>
                 </div>
               ))}
-            </div>
-          </motion.div>
-
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ delay: 0.15, duration: 0.7, ease: easeOut }}
-            className="relative"
-          >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-black/5 relative">
-              <Image
-                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80"
-                alt="Taj Mahal"
-                fill
-                className="object-cover"
-              />
             </div>
           </motion.div>
         </div>
@@ -260,7 +242,7 @@ const About = () => (
     </section>
 
     {/* ── Timeline ── */}
-    <section className="bg-white py-12 md:py-16">
+    {/* <section className="bg-white py-12 md:py-16">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -278,7 +260,7 @@ const About = () => (
         </motion.div>
 
         <div className="relative">
-          {/* Vertical line */}
+    
           <div className="absolute left-[23px] md:left-1/2 md:-translate-x-[0.5px] top-0 bottom-0 w-[1px] bg-black/[0.06]" />
 
           {milestones.map((m, i) => (
@@ -292,10 +274,10 @@ const About = () => (
                 i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              {/* Dot */}
+           
               <div className="absolute left-[19px] md:left-1/2 md:-translate-x-1/2 top-1 w-[9px] h-[9px] rounded-full bg-black/50 border-2 border-white z-10" />
 
-              {/* Content */}
+       
               <div className={`ml-12 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"}`}>
                 <span className="font-display text-xl font-semibold text-black/40 tracking-wide">
                   {m.year}
@@ -305,13 +287,13 @@ const About = () => (
                 </p>
               </div>
 
-              {/* Spacer for the other side */}
+      
               <div className="hidden md:block md:w-1/2" />
             </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
 
     {/* ── Values ── */}
     <section className="bg-[#f8f8f8] py-12 md:py-16">
