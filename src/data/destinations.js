@@ -388,8 +388,9 @@ export const destinationsData = {
       imageSrc: "/north-india.jpg"
     },
     images: [
-      "/tours/golden-triangle.jpg",
-      "/tours/royal-rajasthan.jpg"
+      "/India1.jpg",
+      "/India2.jpg",
+      "/India3.jpg"
     ],
     quickFacts: [
       { label: "Regions", value: "North, South, East, West, Central" },
