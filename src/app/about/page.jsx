@@ -26,11 +26,13 @@ const team = [
   {
     name: "Rahul Baloni",
     role: "Partner",
+    image: null,
     bio: "Rahul Baloni brings a strong understanding of destination operations, itinerary planning, and travel logistics, with a focus on creating seamless and memorable journeys across India. With a passion for showcasing India’s diverse landscapes, heritage, and cultural richness, Rahul works closely on developing personalized travel experiences that reflect both quality and authenticity. His hands-on approach and commitment to service make him a trusted partner for travel professionals seeking reliable ground support in India.",
   },
   {
     name: "Anshul Baloni",
     role: "Partner",
+    image: "/Anshul.jpeg",
     bio: "Anshul Baloni focuses on travel partnerships, client relationships, and curated itinerary development for international travel advisors and agencies. With a strong interest in luxury and tailor-made travel, Anshul is dedicated to building long-term collaborations and creating journeys that are thoughtful, well-paced, and aligned with each client’s expectations. His approach combines responsiveness, creativity, and a deep appreciation for meaningful travel experiences across India and the Indian Subcontinent.",
   }
 ];
@@ -182,7 +184,7 @@ const About = () => (
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
@@ -190,8 +192,23 @@ const About = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.7, ease: easeOut }}
-              className="flex flex-col"
+              className="flex flex-col group"
             >
+              <div className="relative aspect-[4/5] overflow-hidden bg-slate-50 mb-8 rounded-2xl border border-black/[0.03] flex items-center justify-center">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center gap-4">
+                    <Users size={48} strokeWidth={1} className="text-black/10" />
+                    <span className="text-[10px] uppercase tracking-widest text-black/20 font-medium">Portrait withheld</span>
+                  </div>
+                )}
+              </div>
               <h3 className="font-display text-2xl font-semibold text-black mb-1">
                 {member.name}
               </h3>

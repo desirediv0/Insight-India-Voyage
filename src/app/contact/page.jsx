@@ -68,8 +68,59 @@ const easeOut = [0.16, 1, 0.3, 1];
 const inputClass =
   "w-full rounded-xl border border-black/[0.08] bg-transparent py-3.5 px-5 font-body text-sm text-black placeholder:text-black/25 focus:border-black/20 focus:ring-0 outline-none transition-colors duration-300";
 
+import toast from "react-hot-toast";
+
 const Contact = () => {
   const [openFaq, setOpenFaq] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    destination: "",
+    travelDate: "",
+    travelers: "2",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        toast.success("Message sent! We'll contact you soon.");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          destination: "",
+          travelDate: "",
+          travelers: "2",
+          message: "",
+        });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -210,19 +261,33 @@ const Contact = () => {
               transition={{ delay: 0.1, duration: 0.7, ease: easeOut }}
               className="lg:col-span-3"
             >
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label className="font-body text-[12px] text-black/40 mb-2 block uppercase tracking-wider">
                       First Name
                     </label>
-                    <input className={inputClass} placeholder="John" />
+                    <input 
+                      name="firstName"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className={inputClass} 
+                      placeholder="John" 
+                    />
                   </div>
                   <div>
                     <label className="font-body text-[12px] text-black/40 mb-2 block uppercase tracking-wider">
                       Last Name
                     </label>
-                    <input className={inputClass} placeholder="Doe" />
+                    <input 
+                      name="lastName"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className={inputClass} 
+                      placeholder="Doe" 
+                    />
                   </div>
                 </div>
 
@@ -230,7 +295,15 @@ const Contact = () => {
                   <label className="font-body text-[12px] text-black/40 mb-2 block uppercase tracking-wider">
                     Email Address
                   </label>
-                  <input type="email" className={inputClass} placeholder="john@example.com" />
+                  <input 
+                    name="email"
+                    type="email" 
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={inputClass} 
+                    placeholder="john@example.com" 
+                  />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -238,13 +311,27 @@ const Contact = () => {
                     <label className="font-body text-[12px] text-black/40 mb-2 block uppercase tracking-wider">
                       Phone Number
                     </label>
-                    <input type="tel" className={inputClass} placeholder="+91 98765 43210" />
+                    <input 
+                      name="phone"
+                      type="tel" 
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={inputClass} 
+                      placeholder="+91 98765 43210" 
+                    />
                   </div>
                   <div>
                     <label className="font-body text-[12px] text-black/40 mb-2 block uppercase tracking-wider">
                       Destination Interest
                     </label>
-                    <select className={`${inputClass} bg-white appearance-none`}>
+                    <select 
+                      name="destination"
+                      required
+                      value={formData.destination}
+                      onChange={handleChange}
+                      className={`${inputClass} bg-white appearance-none`}
+                    >
                       <option value="">Select destination</option>
                       <option>Rajasthan</option>
                       <option>Kerala</option>
@@ -261,13 +348,29 @@ const Contact = () => {
                     <label className="font-body text-[12px] text-black/40 mb-2 block uppercase tracking-wider">
                       Travel Date
                     </label>
-                    <input type="date" className={inputClass} />
+                    <input 
+                      name="travelDate"
+                      type="date" 
+                      required
+                      value={formData.travelDate}
+                      onChange={handleChange}
+                      className={inputClass} 
+                    />
                   </div>
                   <div>
                     <label className="font-body text-[12px] text-black/40 mb-2 block uppercase tracking-wider">
                       Number of Travelers
                     </label>
-                    <input type="number" min="1" className={inputClass} placeholder="2" />
+                    <input 
+                      name="travelers"
+                      type="number" 
+                      min="1" 
+                      required
+                      value={formData.travelers}
+                      onChange={handleChange}
+                      className={inputClass} 
+                      placeholder="2" 
+                    />
                   </div>
                 </div>
 
@@ -276,6 +379,10 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={4}
                     className={`${inputClass} resize-none`}
                     placeholder="Tell us about your ideal trip..."
@@ -284,13 +391,16 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="group w-full bg-black text-white font-body text-sm font-medium rounded-xl py-4 flex items-center justify-center gap-3 hover:bg-black/85 active:scale-[0.99] transition-all duration-300"
+                  disabled={loading}
+                  className={`group w-full bg-black text-white font-body text-sm font-medium rounded-xl py-4 flex items-center justify-center gap-3 hover:bg-black/85 active:scale-[0.99] transition-all duration-300 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  Send Message
-                  <ArrowRight
-                    size={15}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  />
+                  {loading ? "Sending..." : "Send Message"}
+                  {!loading && (
+                    <ArrowRight
+                      size={15}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  )}
                 </button>
               </form>
             </motion.div>

@@ -16,10 +16,13 @@ export const metadata = {
   },
 };
 
+import { Toaster } from "react-hot-toast";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased bg-white text-[#0a0a0a] font-body">
+        <Toaster position="top-center" />
         <Navbar />
         <main>{children}</main>
         <Footer />

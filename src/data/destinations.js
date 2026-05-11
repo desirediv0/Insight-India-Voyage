@@ -297,7 +297,6 @@ export const destinationsData = {
       imageSrc: "/bhutan.jpg"
     },
     images: [
-      "/bhutan1.jpg",
       "/bhutan2.jpg"
     ],
     quickFacts: [
