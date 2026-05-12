@@ -121,14 +121,14 @@ const Footer = () => {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="tel:+911147092122"
+                  href="tel:+919811489907"
                   className="flex items-center gap-3 group"
                 >
                   <div className="w-8 h-8 rounded-full bg-white/[0.04] flex items-center justify-center flex-shrink-0">
                     <Phone size={13} strokeWidth={1.5} className="text-white/30" />
                   </div>
                   <span className="font-body text-[16px] text-white/60 group-hover:text-white transition-colors duration-300 font-light">
-                    +91 11 4709 2122
+                    +91 98114 89907
                   </span>
                 </a>
 

@@ -13,7 +13,7 @@ const faqs = [
 ];
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+91 11 4709 2122", sub: "+91 11 2803 3087", href: "tel:+911147092122" },
+  { icon: Phone, label: "Phone", value: "+91 98114 89907", href: "tel:+919811489907" },
   { icon: Mail, label: "Email", value: "info@insightindiavoyage.com", href: "mailto:info@insightindiavoyage.com" },
   { icon: MapPin, label: "Office", value: "Dwarka, New Delhi", sub: "India — 110075" },
   { icon: Clock, label: "Hours", value: "Mon – Sat: 9 AM – 7 PM", sub: "IST" },
