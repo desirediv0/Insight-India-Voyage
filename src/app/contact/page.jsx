@@ -28,18 +28,6 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const FacebookIcon = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-  </svg>
-);
-
-const XIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
-
 const LinkedinIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -48,19 +36,9 @@ const LinkedinIcon = () => (
   </svg>
 );
 
-const YoutubeIcon = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
-    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-  </svg>
-);
-
 const socials = [
-  { icon: InstagramIcon, name: "Instagram" },
-  { icon: FacebookIcon, name: "Facebook" },
-  { icon: XIcon, name: "X" },
-  { icon: LinkedinIcon, name: "LinkedIn" },
-  { icon: YoutubeIcon, name: "YouTube" },
+  { icon: InstagramIcon, name: "Instagram", href: "https://www.instagram.com/officialinsightindiavoyage?igsh=MTJob2xuYm9tdTdkbA%3D%3D&utm_source=qr" },
+  { icon: LinkedinIcon, name: "LinkedIn", href: "https://www.linkedin.com/in/anshul-baloni-6b0868b3/" },
 ];
 
 const easeOut = [0.16, 1, 0.3, 1];
@@ -239,10 +217,12 @@ const Contact = () => {
                   Follow Us
                 </p>
                 <div className="flex gap-2">
-                  {socials.map(({ icon: Icon, name }) => (
+                  {socials.map(({ icon: Icon, name, href }) => (
                     <a
                       key={name}
-                      href="#"
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={name}
                       className="w-9 h-9 rounded-full border border-black/[0.08] flex items-center justify-center text-black/30 hover:text-black hover:border-black/20 transition-all duration-300"
                     >
